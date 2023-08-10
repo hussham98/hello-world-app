@@ -34,6 +34,4 @@ jobs:
     
     - name: Debug application run
       run: |
-        pwd  # Print the current working directory
-        ls   # List the contents of the current directory
-        gunicorn --chdir app.py -b 0.0.0.0:8000 app:app
+        gunicorn bind 0.0.0.0:8000 app:app
